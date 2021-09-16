@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de Inicio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/estiloIndex.css">
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="contenedor">
+	<header>
+		<h1>Pc'Store</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html"> Inicio </a></li>
+			<li><a href="accesorios.html"> Accesorios</a></li>
+			<li><a href="ofertas.html"> Ofertas </a></li>
+			<li><a href="formulario.html"> Comprar </a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="imagenesFlex">
+			<div class="flexslider">
+			  <ul class="slides">
+				<li>
+				  <img src="imagenes/index1.jpg" />
+				</li>
+				<li>
+				  <img src="imagenes/index2.jpg" />
+				</li>
+				<li>
+				  <img src="imagenes/index3.jpg" />
+				</li>
+				<li>
+				  <img src="imagenes/index4.jpg" />
+				</li>				
+			  </ul>
+			</div>
+		</div>
+		
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+		<!-- FlexSlider -->
+		<script defer src="js/jquery.flexslider-min.js"></script>		
+		
+		<script>
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+			animation: "slide",
+		  });
+		});
+		</script>
+
+		<div class="cajaIndex">
+			<h1 id="sub">Categorías</h1>
+			<a href="Accesorios.html"><h2 class="cat">Accesorios</h2></a>
+			<a href="ofertas.html"><h2 class="cat">Ofertas</h2></a>
+			<a href="formulario.html"><h2 class="cat">Formulario de Compra</h2></a>
+		</div>
+		
+	</main>
+	<footer>
+		<span> RV </span>
+	</footer>
+</div>
+</body>
+</html>

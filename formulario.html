@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de Formulario</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/estiloFormulario.css">
+	<script src="js/formulario.js"></script>
+</head>
+<body>
+<div id="contenedor">
+	<header>
+		<h1>Pc'Store</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html"> Inicio </a></li>
+			<li><a href="accesorios.html"> Accesorios</a></li>
+			<li><a href="ofertas.html"> Ofertas </a></li>
+			<li><a href="formulario.html"> Comprar </a></li>
+		</ul>
+	</nav>
+	<main>
+		<div id="contSubtitulo">
+			<h1 id="subtitulo">Formulario de Compra</h1>
+		</div>
+		<form name="form1" id="form1" method="get" action="#" onSubmit="return valida();"> 
+			<fieldset>
+				<legend>Datos del Comprador</legend>
+				<div class="d">
+					<label class="label" for="rut">Rut</label>
+					<input type="text" name="rut" id="rut" placeholder="12444333-k" onBlur="obligatorio('rut','errorRut');">
+					<span id="errorRut" class="textoError"></span>
+				</div>
+				<div class="d">
+					<label class="label" for="nombre">Nombre Completo</label>
+					<input type="text" name="nombre" id="nombre" placeholder="Juanito Perez" onBlur="obligatorio('nombre','errorNombre');">
+					<span id="errorNombre" class="textoError"></span>
+				</div>
+				<div class="d">
+					<label class="label"> Género </label>
+					<input type="radio" name="genero" id="Maculino" value="masculino"> 
+					<label for="masculino" class="gen">Masculino</label>
+					<input type="radio" name="genero" id="femenino" value="femenino"> 
+					<label for="femenino" class="gen">Femenino</label>
+				</div>
+				<div class="d">
+					<label class="label" for="correo">Correo</label>
+					<input type="email" name="correo" id="correo" placeholder="ejemplo_@gmail.com" onBlur="obligatorio('correo','errorCorreo');">
+					<span id="errorCorreo" class="textoError"></span>
+				</div>
+				<div class="d">
+					<label class="label" for="telefono">Celular</label>
+					<input type="text" name="telefono" id="telefono" placeholder="9XXXXXXXX" onBlur="obligatorio('telefono','errorTelefono');">
+					<span id="errorTelefono" class="textoError"></span>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Datos de Envío</legend>
+				<div class="d">
+					<label class="label" for="direccion">Direccion</label>
+					<input type="text" name="direccion" id="direccion" placeholder="Av Macul #333" onBlur="obligatorio('direccion','errorDireccion');">
+					<span id="errorDireccion" class="textoError"></span>
+				</div>
+				<div class="d">
+					<label class="label" for="region">Región de Residencia</label>
+					<select name="region" id="region" onBlur="obligatorio('region','errorRegion');">
+						<option value=""> - Seleccionar - </option>
+						<option value="ARICA Y PARINACOTA"> ARICA Y PARINACOTA </option>
+						<option value="TARAPACÁ"> TARAPACÁ </option>
+						<option value="ANTOFAGASTA"> ANTOFAGASTA </option>
+						<option value="ATACAMA"> ATACAMA </option>
+						<option value="COQUIMBO"> COQUIMBO </option>
+						<option value="VALPARAÍSO"> VALPARAÍSO </option>
+						<option value="METROPOLITANA"> METROPOLITANA </option>
+						<option value="O'HIGGINS"> O'HIGGINS </option>
+						<option value="MAULE"> MAULE </option>
+						<option value="ÑUBLE"> ÑUBLE </option>
+						<option value="BIO BIO"> BIO BIO </option>
+						<option value="LA ARAUCANÍA"> LA ARAUCANÍA </option>
+						<option value="LOS RÍOS"> LOS RÍOS </option>
+						<option value="LOS LAGOS"> LOS LAGOS </option>
+						<option value="AYSÉN"> AYSÉN </option>
+						<option value="MAGALLANES"> MAGALLANES </option>
+					</select>
+					<span id="errorRegion" class="textoError"></span>
+				</div>
+				<div class="d">
+					<label class="label" for="descripcion"> Indicaciones Extra para el Envío </label>
+					<textarea name="descripcion" id="descripcion" placeholder="Condominio/Villa/Poblacion"></textarea>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Selección de Productos</legend>
+				<div class="d">
+					<table>
+						<tbody>
+							<tr>
+						     	<th></th>
+						     	<th>Precio</th>
+						    	<th>Descripción</th>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="AudifonoGamerHyperX" value="AudifonoGamerHyperX"></td>
+						      	<td>$51.740</td>
+						      	<td><label for="AudifonoGamerHyperX" class="checks">Audifono Gamer HyperX Cloud Stinger, Control de volumen, Micrófono con cancelación de ruido</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="MonitorGamerGigabyte" value="MonitorGamerGigabyte"></td>
+						      	<td>$319.990</td>
+						      	<td><label for="MonitorGamerGigabyte" class="checks">Monitor Gamer Gigabyte 27" IPS G27F-SA, Full HD 1920x1080, 144Hz, 1ms, FreeSync & GSync Compatible</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="MouseGamerGenius" value="MouseGamerGenius"></td>
+						      	<td>$19.650</td>
+						      	<td><label for="MouseGamerGenius" class="checks">Mouse Gamer Genius Gaming Ammox X1-400 Negro USB 400-3200 (DPI)</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="VolantedeCarreraGamingLogitech" value="VolantedeCarreraGamingLogitech"></td>
+						      	<td>$279.440</td>
+						      	<td><label for="VolantedeCarreraGamingLogitech" class="checks">Volante de Carrera Gaming Logitech G29 Driving Force Racing Wheel PS3 y PS4</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="MemoriaRamDDR4Thermaltake" value="MemoriaRamDDR4Thermaltake"></td>
+						      	<td>$19.650</td>
+						      	<td><label for="MemoriaRamDDR4Thermaltake" class="checks">Memoria Ram DDR4 16GB(2x8GB) Thermaltake Toughram Z-One RGB, 3200MHz, CL16, Black, TT RGB Plus</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="BungeeparaMouseCougarRGB" value="BungeeparaMouseCougarRGB"></td>
+						      	<td>$33.110</td>
+						      	<td><label for="BungeeparaMouseCougarRGB" class="checks">Bungee para Mouse Cougar RGB, Luces RGB, Black</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="BaseEnfriadoraconVentilador" value="BaseEnfriadoraconVentilador"></td>
+						      	<td>$10.340</td>
+						      	<td><label for="BaseEnfriadoraconVentilador" class="checks">Base Enfriadora con Ventilador Laptop Fiddler</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="PackBelkinTrueClearProAdvanced" value="PackBelkinTrueClearProAdvanced"></td>
+						      	<td>$2.060</td>
+						      	<td><label for="PackBelkinTrueClearProAdvanced" class="checks">Pack Belkin TrueClear® Pro Advanced Screen Care™, 25 Paños, 5 Sprays y 10 Herramientas Removedoras</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="CargadorPortátilparaNotebookLenovo" value="CargadorPortátilparaNotebookLenovo"></td>
+						      	<td>$142.810</td>
+						      	<td><label for="CargadorPortátilparaNotebookLenovo" class="checks">Cargador Portátil para Notebook Lenovo, USB-C, 14000mAh</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="TarjetadeVideoAsusROGSTRIXRadeon" value="TarjetadeVideoAsusROGSTRIXRadeon"></td>
+						      	<td>$413.890</td>
+						      	<td><label for="TarjetadeVideoAsusROGSTRIXRadeon" class="checks">Tarjeta de Video Asus ROG STRIX Radeon RX 5600 XT 6GB 192-Bit GDDR6 PCI Express 4.0</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="DiscoPortátilSeagateExpansion" value="DiscoPortátilSeagateExpansion"></td>
+						      	<td>$167.970</td>
+						      	<td><label for="DiscoPortátilSeagateExpansion" class="checks">Disco Portátil Seagate Expansion Desktop, 8TB, USB 3.0, Black</label></td>
+						    </tr>
+						     <tr>
+						      	<td><input type="checkbox" name="productos" id="MousepadGamerRazerFirefly" value="MousepadGamerRazerFirefly"></td>
+						      	<td>$62.090</td>
+						      	<td><label for="MousepadGamerRazerFirefly" class="checks">Mousepad Gamer Razer Firefly Chroma Gaming (Cloth Edition)</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="ParlanteparaPCGamerTrust" value="ParlanteparaPCGamerTrust"></td>
+						      	<td>$155.240</td>
+						      	<td><label for="ParlanteparaPCGamerTrust" class="checks">Parlante para PC Gamer Trust GXT 629 Tytan RGB Illuminated 2.1 120W Speaker Set, Subwoofer RGB</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="CapturadoradeVideoAVerMedia" value="CapturadoradeVideoAVerMedia"></td>
+						      	<td>$238.040</td>
+						      	<td><label for="CapturadoradeVideoAVerMedia" class="checks">Capturadora de Video AVerMedia Live Gamer Portable 2 Plus, USB 2.0, grabar PS4, Xbox One, y Switch</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="EscritorioGamerCougarMars" value="EscritorioGamerCougarMars"></td>
+						      	<td>$413.990</td>
+						      	<td><label for="EscritorioGamerCougarMars" class="checks">Escritorio Gamer Cougar Mars RGB, Acero, Ajustable, USB 3.0, Jacks 3,5mm</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="EnfriamientoLiquidoNZXTKraken" value="EnfriamientoLiquidoNZXTKraken"></td>
+						      	<td>$103.490</td>
+						      	<td><label for="EnfriamientoLiquidoNZXTKraken" class="checks">Enfriamiento Liquido NZXT Kraken M22 212mm, All-in-One CPU Liquid Cooling, RGB, Intel, AMD Ryzen</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="MonitorGamerCurvoViewsonic" value="MonitorGamerCurvoViewsonic"></td>
+						      	<td>$729.990</td>
+						      	<td><label for="MonitorGamerCurvoViewsonic" class="checks">Monitor Gamer Curvo Viewsonic XG350R-C, QHD 3440 x 1440, 100Hz, 3ms, HDR10, AMD Freesync, RGB</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="PlacaMadreMSITRX40" value="PlacaMadreMSITRX40"></td>
+						      	<td>$499.990</td>
+						      	<td><label for="PlacaMadreMSITRX40" class="checks">Placa Madre MSI TRX40 PRO WiFi,AMD sTRX4, M.2, USB3.2 Gen2x2, DDR4, Dual 10G LAN, Wi-Fi 6, ATX</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="TarjetadeVideoMSIRadeonRX5600" value="TarjetadeVideoMSIRadeonRX5600"></td>
+						      	<td>$349.890</td>
+						      	<td><label for="TarjetadeVideoMSIRadeonRX5600" class="checks">Tarjeta de Video MSI Radeon RX 5600 XT Gaming MX 6GB 192-Bit GDDR6 PCI Express 4.0</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="MemoriaRamDDR416GB" value="MemoriaRamDDR416GB"></td>
+						      	<td>$129.990</td>
+						      	<td><label for="MemoriaRamDDR416GB" class="checks">Memoria Ram DDR4 16GB (2x8GB) 3000MHz XPG Spectrix D60G RGB, Tungsten Grey, CL16-20-20</label></td>
+						    </tr>
+						    <tr>
+						      	<td><input type="checkbox" name="productos" id="UnidadSSDKingstonA400" value="UnidadSSDKingstonA400"></td>
+						      	<td>$194.990</td>
+						      	<td><label for="UnidadSSDKingstonA400" class="checks">Unidad SSD 1.92TB Kingston A400, Lectura 500 MB/s, Escritura 450MB/s</label></td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			</fieldset>
+			<div class="btns">
+				<input type="submit" name="btnGuardar" class="botones" value="Enviar">
+				<input type="reset" name="btnReset" class="botones" value="Cancelar">
+			</div>
+		</form>
+		
+	</main>
+	<footer>
+		<span> RV </span>
+	</footer>
+</div>
+</body>
+</html>

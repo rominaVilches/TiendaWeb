@@ -1,0 +1,257 @@
+body{
+	margin: 0; 
+}
+
+header{
+	font-family: Bungee;
+	font-size: 30px;
+	color: #E24677;
+	background-color: #171717; 
+	text-align: center; 
+	padding: 5px; 
+}
+
+nav{
+	text-align: center; 
+	background-color: #400119;
+	border-top: 2px inset #E24677;
+	border-bottom: 2px inset #E24677;
+}
+
+nav ul{ 
+	list-style: none; 
+	padding: 5px;
+	margin: 0;
+}
+
+nav ul li{ 
+	display: inline-block; 
+}
+
+nav ul li a{
+	background-color: #171717;
+	color: #fff;
+	font-family: Bungee-Regular;
+	width: 150px; 
+	display: block; 
+	margin: 5px; 
+	padding: 9px; 
+	text-decoration: none; 
+	border-radius: 5px;
+	border: 2px inset #E24677;
+}
+
+nav ul li a:hover{ 
+	background-color: #E24677;
+}
+
+footer{
+	border-bottom: 2px inset #E24677;
+	border-top: 2px solid #E24677;
+	color: #fff;
+	text-align: center;
+	font-family: Bungee-Regular;
+	font-size: 18px;
+	background-color: #400119;
+	margin: 0;
+	padding: 10px;
+}
+
+main{
+	background-color: #800033; 
+	padding: 5px;
+}
+
+.imagenesFlex1{
+	width: 400px;
+	margin-left: 30px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.imagenesFlex2{
+	width: 400px;
+	margin-left: 30px;
+	margin-top: 40px;
+	display: inline-block;
+}
+
+.contenedor{
+	width: 950px;
+	height: 420px;
+	background-color: #42001A;
+	padding: 20px;
+	padding-bottom: 25px;
+	margin: 1%;
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+#subtitulo{
+	font-family: Bungee;
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+}
+
+#contSubtitulo{
+	width: 500px;
+	background-color: #290013;
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding: 1px;
+	border: 3px double #E24677;
+}
+
+.contTexto{
+	width: 380px;
+	background-color: #290013;
+	border-radius: 5px;
+	padding: 5px 30px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 40px;
+	margin-left: 40px; 
+}
+
+.antes{
+	text-decoration: line-through #FF0101;
+	font-family: Arial;
+	color: #fff;
+}
+
+.descuento{
+	font-family: Arial;
+	color: #fff;
+}
+
+.ahora{
+	font-family: Arial;
+	color: #fff;
+}
+
+p{
+	font-family: Bungee-Regular;
+	color: #fff;
+	font-size: 20px;
+}
+
+/*tag descuento*/
+
+.item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.item img {
+  display:block;
+}
+.item.promoted:after {
+  content: attr(data-awards) ' de Dcto.';
+  position: absolute;
+  background: #ED0000;
+  color: white;
+  width: 65%;
+  line-height: 20px;
+  text-align: center;
+  padding: 0.5em 0;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg) translate(30%,-25%);
+  transform-origin: 50% 50%;
+  font-family: Bungee-Regular;
+  font-size: 20px;
+}
+
+/*Fonts*/
+
+@font-face{
+	font-family: 'Bungee';
+	src: url(../fonts/BungeeShade-Regular.ttf); 
+}
+
+@font-face{
+	font-family: 'Bungee-Regular';
+	src: url(../fonts/Bungee-Regular.ttf); 
+}
+
+
+@media screen and (min-width: 394px) and (max-width: 1160px) { 
+	
+	.imagenesFlex1{
+		width: 350px;
+	}
+
+	.imagenesFlex2{
+		width: 350px;
+	}
+
+	.contenedor{
+		width: 800px;
+	}
+	.contTexto{
+		width: 300px;
+		margin-top: 10px;
+	}
+
+	#subtitulo{
+		font-size: 30px;
+		text-align: center;
+	}
+
+	#contSubtitulo{
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 900px) { 
+
+	.imagenesFlex1{
+		width: 300px;
+	}
+
+	.imagenesFlex2{
+		width: 300px;
+	}
+
+	.contenedor{
+		width: 360px;
+		height: 700px;
+	}
+
+	.contTexto{
+		width: 250px;
+		margin-top: 10px;
+		margin-left: 30px;
+		display: block;
+	}
+
+	#subtitulo{
+		font-size: 25px;
+		text-align: center;
+	}
+
+	#contSubtitulo{
+		width: 350px;
+	}
+	
+	p{
+		font-size: 15px;
+	}
+
+	nav ul li a{
+		width: 110px; 
+		padding: 5px; 
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+

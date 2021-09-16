@@ -1,0 +1,178 @@
+body{
+	margin: 0; 
+}
+
+header{
+	font-family: Bungee;
+	font-size: 30px;
+	color: #E24677;
+	background-color: #171717; 
+	text-align: center; 
+	padding: 5px; 
+}
+
+nav{
+	text-align: center; 
+	background-color: #400119;
+	border-top: 2px inset #E24677;
+	border-bottom: 2px inset #E24677;
+}
+
+nav ul{ 
+	list-style: none; 
+	padding: 5px;
+	margin: 0;
+}
+
+nav ul li{ 
+	display: inline-block; 
+}
+
+nav ul li a{
+	background-color: #171717;
+	color: #fff;
+	font-family: Bungee-Regular;
+	width: 150px; 
+	display: block; 
+	margin: 5px; 
+	padding: 9px; 
+	text-decoration: none; 
+	border-radius: 5px;
+	border: 2px inset #E24677;
+}
+
+nav ul li a:hover{ 
+	background-color: #E24677;
+}
+
+footer{
+	border-bottom: 2px inset #E24677;
+	border-top: 2px solid #E24677;
+	color: #fff;
+	text-align: center;
+	font-family: Bungee-Regular;
+	font-size: 18px;
+	background-color: #400119;
+	margin: 0;
+	padding: 10px;
+}
+
+main{
+	background-color: #800033; 
+	padding: 5px;
+}
+
+.imagenesFlex{
+	width: 800px;
+	margin-left: 30px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+#sub{
+	font-family: Bungee-Regular;
+	color: #fff;
+}
+
+.cat{
+	font-family: Bungee;
+	color: #fff;
+}
+
+.cajaIndex{
+	background-color: #290010;
+	width: 400px;
+	text-align: center;
+	padding: 20px 10px;
+	border: 4px inset #E24677;
+	border-radius: 10px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 90px;
+	margin-left: 30px
+}
+
+.cat:hover{ 
+	color: #E24677;
+
+}
+
+a{
+	text-decoration: none;
+}
+/*Fonts*/
+
+@font-face{
+	font-family: 'Bungee';
+	src: url(../fonts/BungeeShade-Regular.ttf); 
+}
+
+@font-face{
+	font-family: 'Bungee-Regular';
+	src: url(../fonts/Bungee-Regular.ttf); 
+}
+
+
+@media screen and (min-width: 334px) and (max-width: 1305px) { 
+
+	.imagenesFlex{
+		width: 600px;
+	}
+
+	.cajaIndex{
+		width: 400px;
+		margin-top: 30px;
+		margin-left: 30px
+	}
+
+}
+
+@media screen and (min-width: 334px) and (max-width: 1098px) { 
+
+	.imagenesFlex{
+		width: 600px;
+		display: block;
+		margin: auto;
+	}
+
+	.cajaIndex{
+		display: block;
+		margin: auto;
+	}
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 668px) { 
+
+	.imagenesFlex{
+		width: 500px;
+		display: block;
+		margin: auto;
+	}
+
+	.cajaIndex{
+		width: 300px;
+		display: block;
+		margin: auto;
+	}
+
+	main ul{
+		margin: 30px;
+		margin-left: 90px;
+		padding: 50px;
+	}
+	nav ul li a{
+		width: 110px; 
+		padding: 5px; 
+		font-size: 13px;
+	}
+	main ul li a{
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+
